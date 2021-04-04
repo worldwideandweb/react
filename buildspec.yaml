@@ -2,7 +2,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - npm run co:loginaws codeartifact login --tool npm --repository worldwideandweb-dependancies --domain worldwideandweb --domain-owner 460234074473
+      - aws codeartifact login --tool npm --repository worldwideandweb-dependancies --domain worldwideandweb --domain-owner 460234074473
       - echo Installing source NPM dependencies...
       - npm install
   build:
