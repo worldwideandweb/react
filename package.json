@@ -10,14 +10,17 @@
     "@types/node": "^12.20.7",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
+    "axios": "^0.21.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "typescript": "^4.2.3",
-    "web-vitals": "^1.1.1"
+    "web-vitals": "^1.1.1",
+    "worldwideandweb-storybook": "^0.1.30"
   },
   "scripts": {
     "start": "react-scripts start",
+    "co:login": "aws codeartifact login --tool npm --repository worldwideandweb-dependancies --domain worldwideandweb --domain-owner 460234074473 --profile worldwideandweb",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

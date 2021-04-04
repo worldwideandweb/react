@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import WWWButton from 'worldwideandweb-storybook/lib/Button/Button';
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         >
           Learn React
         </a>
+        <WWWButton />
       </header>
     </div>
   );
