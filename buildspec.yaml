@@ -2,7 +2,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - npm co:login
+      - npm run co:login
       - echo Installing source NPM dependencies...
       - npm install
   build:
