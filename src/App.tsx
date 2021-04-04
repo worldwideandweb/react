@@ -22,7 +22,7 @@ function App() {
         </a>
         <WWWButton />
         <Box marginRight={'amir'}>
-          hello world
+          hello world 2
         </Box>
       </header>
     </div>
