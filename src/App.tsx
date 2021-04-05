@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <WWWButton>testing button</WWWButton>
+      <WWWButton variant='contained'>testing button</WWWButton>
       <Box marginRight={'amir'}>Muddasir is the best</Box>
     </div>
   );
