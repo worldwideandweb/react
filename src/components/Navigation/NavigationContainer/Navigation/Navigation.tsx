@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import {
   AppBar,
   Button,
@@ -11,13 +11,23 @@ import {
 } from 'worldwideandweb-storybook/dist/icons/External';
 import useStyles from './Navigation.styles';
 
-const Navigation: React.FC = () => {
+interface IProps {
+  handleDrawerClick: () => void;
+}
+
+const Navigation: React.FC<IProps> = ({ handleDrawerClick }: IProps) => {
   const styles = useStyles();
+
   return (
     <AppBar position="fixed">
       <Toolbar className={styles.root}>
         <div className={styles.left}>
-          <IconButton edge="start" color="inherit" aria-label="menu">
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            onClick={handleDrawerClick}
+          >
             <Menu />
           </IconButton>
           <img src="https://worldwideandweb.com/wp-content/uploads/2020/05/cropped-blueLogo-1.png" />
@@ -36,4 +46,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-export default Navigation;
+export default memo(Navigation);
