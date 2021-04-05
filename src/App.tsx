@@ -1,16 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import WWWButton from 'worldwideandweb-storybook/dist/Button/Button';
-import { Box } from 'worldwideandweb-storybook/dist/External ';
+import WWWButton from 'worldwideandweb-storybook/dist/components/Button/Button';
+import { Box } from 'worldwideandweb-storybook/dist/components/External';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-        <WWWButton />
-        <Box marginRight={'amir'}>
-          Muddasir is the best
-        </Box>
+      <WWWButton>testing button</WWWButton>
+      <Box marginRight={'amir'}>Muddasir is the best</Box>
     </div>
   );
 }
