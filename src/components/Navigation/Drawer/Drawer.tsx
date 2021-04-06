@@ -16,7 +16,7 @@ const Drawer: React.FC<IProps> = ({ drawerOpen, setDrawerOpen }: IProps) => {
       onClose={() => setDrawerOpen(false)}
       className={styles.root}
     >
-      <h2>hi</h2>
+      
     </MuiDrawer>
   );
 };
