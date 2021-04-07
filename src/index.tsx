@@ -5,12 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import theme from 'worldwideandweb-storybook/dist/theme/theme';
 import { MuiThemeProvider } from 'worldwideandweb-storybook/dist/components/External';
+import { Router } from 'react-router-dom';
+import history from './routes/history';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MuiThemeProvider theme={theme}>
-      <App />
-    </MuiThemeProvider>
+    <Router history={history}>
+      <MuiThemeProvider theme={theme}>
+        <App />
+      </MuiThemeProvider>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

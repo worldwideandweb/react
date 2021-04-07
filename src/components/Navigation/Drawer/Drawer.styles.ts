@@ -5,7 +5,9 @@ const useStyles = makeStyles(() => {
     root: {
       '& .MuiPaper-root': {
         width: '250px',
-        backgroundColor: '#ffffff',
+        padding: '8px 0',
+        boxSizing: 'border-box',
+        backgroundColor: '#424242',
       },
     },
   };
