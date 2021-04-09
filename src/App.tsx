@@ -1,15 +1,17 @@
 import React from 'react';
-import WWWButton from 'worldwideandweb-storybook/dist/components/Button/Button';
-import { Box } from 'worldwideandweb-storybook/dist/components/External';
+import { Switch } from 'react-router';
+import { Route } from 'react-router-dom';
 import './App.css';
+import Login from './components/Login';
 import NavigationContainer from './components/Navigation/NavigationContainer/NavigationContainer';
 
 function App() {
   return (
     <div className="App">
       <NavigationContainer />
-      <WWWButton variant="contained">testing button</WWWButton>
-      <Box marginRight={'amir'}>Muddasir is the best</Box>
+      <Switch>
+        <Route path={'/login'} component={Login} />
+      </Switch>
     </div>
   );
 }
