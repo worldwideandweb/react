@@ -8,6 +8,10 @@ import { MuiThemeProvider } from 'worldwideandweb-storybook/dist/components/Exte
 import { Router } from 'react-router-dom';
 import history from './routes/history';
 
+import awsExports from './utils/amplify-exports';
+import Amplify from 'aws-amplify';
+Amplify.configure(awsExports);
+
 ReactDOM.render(
   <React.StrictMode>
     <Router history={history}>
