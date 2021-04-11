@@ -27,7 +27,7 @@ const Profile: React.FC<IProps> = (props: IProps) => {
         onClick={(event) => props.handleMenuOpen(event, true)}
         color="inherit"
       >
-        <AccountCircle />
+        <AccountCircle fontSize={'large'} />
       </IconButton>
       <Menu
         id="menu-appbar"
