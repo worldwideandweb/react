@@ -8,7 +8,6 @@ const useStyles = makeStyles({
   },
   right: {
     ...flex('column', 'center', 'flex-start'),
-    marginTop: '60px',
     width: '100%',
     position: 'relative',
     height: '100%',

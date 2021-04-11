@@ -17,8 +17,8 @@ enum AppUrls {
   let environmentVars: EnvironmentConfig = {
     REACT_APP_API_URL: 'https://api.dev.worldwideandweb.com/',
     REACT_APP_COGNITO: {
-      poolId: 'eu-west-1_npgPwqBfx',
-      clientId: '3ftkgsareirbu8t9rj30mmhj9t',
+      poolId: 'eu-west-1_UHPVMprZX',
+      clientId: '7qt2tt4ef4foqqb5e35kmo9r23',
       storage: localStorage,
     },
   };

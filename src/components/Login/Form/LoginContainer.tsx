@@ -1,6 +1,6 @@
 import { Auth } from 'aws-amplify';
 import { CognitoUser } from '@aws-amplify/auth';
-import React from 'react';
+import React, { useState } from 'react';
 import * as yup from 'yup';
 
 import useForm from '../../../hooks/useForm';
@@ -30,10 +30,12 @@ interface IProps {
 }
 
 const LoginContainer: React.FC<IProps> = ({ setUser }: IProps) => {
+    const [loading, setLoading] = useState<boolean>(false);
   const sb = useSnackbar();
 
   const submitLogin = async (values: TLogin) => {
     try {
+        setLoading(true);
       const user: CognitoUser = await Auth.signIn(
         values.username,
         values.password
@@ -42,6 +44,8 @@ const LoginContainer: React.FC<IProps> = ({ setUser }: IProps) => {
       setUser(user);
     } catch (e) {
       sb.trigger(`${e.message}`);
+    } finally {
+        setLoading(false);
     }
   };
 
@@ -51,7 +55,7 @@ const LoginContainer: React.FC<IProps> = ({ setUser }: IProps) => {
     submitLogin
   );
 
-  return <Login formik={formik} />;
+  return <Login formik={formik} loading={loading} />;
 };
 
 export default LoginContainer;

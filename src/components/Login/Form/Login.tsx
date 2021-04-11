@@ -4,6 +4,7 @@ import { FormikProps } from 'formik/dist/types';
 import React, { memo } from 'react';
 import WWWButton from 'worldwideandweb-storybook/dist/components/Button/Button';
 import {
+  CircularProgress,
   TextField,
   Typography,
 } from 'worldwideandweb-storybook/dist/components/External';
@@ -11,9 +12,15 @@ import { TLogin } from './LoginContainer';
 
 interface IProps {
   formik: FormikProps<TLogin>;
+  loading: boolean;
 }
 
-const Login: React.FC<IProps> = ({ formik }: IProps) => {
+const Login: React.FC<IProps> = ({ formik, loading }: IProps) => {
+  const loadingIcon = loading ? (
+    <CircularProgress disableShrink size={20} color='inherit' />
+  ) : (
+    <FontAwesomeIcon icon={faArrowRight} />
+  );
   return (
     <form onSubmit={formik.handleSubmit}>
       <div>
@@ -47,7 +54,7 @@ const Login: React.FC<IProps> = ({ formik }: IProps) => {
             variant="contained"
             size={'large'}
             color="primary"
-            endIcon={<FontAwesomeIcon icon={faArrowRight} />}
+            endIcon={loadingIcon}
             type="submit"
           >
             SIGN IN
