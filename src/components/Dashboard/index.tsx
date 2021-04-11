@@ -1,21 +1,30 @@
 import React from 'react';
-import { Bar } from 'react-chartjs-2';
+import { Bar, Line, Radar } from 'react-chartjs-2';
 import { Grid } from 'worldwideandweb-storybook/dist/components/External';
+import theme from 'worldwideandweb-storybook/dist/theme/theme';
 import Chart from '../Charts';
 import NavigationContainer from '../Navigation/NavigationContainer/NavigationContainer';
 import useStyles from './Dashboard.styles';
-import styles from './Dashboard.styles';
 
 const data = {
   labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
   datasets: [
     {
       label: 'My First dataset',
-      backgroundColor: 'rgba(255,99,132,0.2)',
-      borderColor: 'rgba(255,99,132,1)',
+      backgroundColor: theme.palette.primary.main,
+      borderColor: theme.palette.primary.main,
       borderWidth: 1,
-      hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-      hoverBorderColor: 'rgba(255,99,132,1)',
+      hoverBackgroundColor: theme.palette.primary.main,
+      hoverBorderColor: theme.palette.secondary.main,
+      data: [35, 49, 50, 61, 76, 85, 90],
+    },
+    {
+      label: 'My Second dataset',
+      backgroundColor: theme.palette.secondary.main,
+      borderColor: theme.palette.secondary.main,
+      borderWidth: 1,
+      hoverBackgroundColor: theme.palette.secondary.main,
+      hoverBorderColor: theme.palette.secondary.main,
       data: [65, 59, 80, 81, 56, 55, 40],
     },
   ],
@@ -27,14 +36,53 @@ const Dashboard = () => {
     <>
       <NavigationContainer />
       <Grid container className={styles.root} spacing={2}>
-        <Grid item sm={6} xs={12}>
+        <Grid item md={4} sm={6} xs={12}>
           <Chart>
             <Bar data={data} />
           </Chart>
         </Grid>
-        <Grid item sm={6} xs={12}>
+        <Grid item md={4} sm={6} xs={12}>
+          <Chart>
+            <Radar data={data} />
+          </Chart>
+        </Grid>
+        <Grid item md={4} sm={6} xs={12}>
+          <Chart>
+            <Line data={data} />
+          </Chart>
+        </Grid>
+      </Grid>
+      <Grid container className={styles.root} spacing={2}>
+        <Grid item md={4} sm={6} xs={12}>
           <Chart>
             <Bar data={data} />
+          </Chart>
+        </Grid>
+        <Grid item md={4} sm={6} xs={12}>
+          <Chart>
+            <Radar data={data} />
+          </Chart>
+        </Grid>
+        <Grid item md={4} sm={6} xs={12}>
+          <Chart>
+            <Line data={data} />
+          </Chart>
+        </Grid>
+      </Grid>
+      <Grid container className={styles.root} spacing={2}>
+        <Grid item md={4} sm={6} xs={12}>
+          <Chart>
+            <Bar data={data} />
+          </Chart>
+        </Grid>
+        <Grid item md={4} sm={6} xs={12}>
+          <Chart>
+            <Radar data={data} />
+          </Chart>
+        </Grid>
+        <Grid item md={4} sm={6} xs={12}>
+          <Chart>
+            <Line data={data} />
           </Chart>
         </Grid>
       </Grid>

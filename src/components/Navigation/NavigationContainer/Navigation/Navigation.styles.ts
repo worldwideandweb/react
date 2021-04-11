@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => {
       alignItems: 'center',
       minHeight: '80px',
       '& img': {
-        width: '230px',
+        width: '200px',
         margin: '0 16px',
       },
       '& .menuButton': {
