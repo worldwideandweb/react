@@ -13,7 +13,7 @@ interface IProps {
   formik: FormikProps<TLogin>;
 }
 
-const Login: React.FC<IProps> = ({ formik }: IProps) => {
+const Password: React.FC<IProps> = ({ formik }: IProps) => {
   return (
     <form onSubmit={formik.handleSubmit}>
       <div>
@@ -62,4 +62,4 @@ const Login: React.FC<IProps> = ({ formik }: IProps) => {
   );
 };
 
-export default memo(Login);
+export default memo(Password);

@@ -1,1 +1,4 @@
-export {}
+class AuthorizationService {
+}
+
+export default AuthorizationService;

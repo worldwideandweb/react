@@ -7,27 +7,16 @@ import {
   TextField,
   Typography,
 } from 'worldwideandweb-storybook/dist/components/External';
-import { TLogin } from './LoginContainer';
+import { TNewPassword } from './NewPasswordContainer';
 
 interface IProps {
-  formik: FormikProps<TLogin>;
+  formik: FormikProps<TNewPassword>;
 }
 
-const Login: React.FC<IProps> = ({ formik }: IProps) => {
+const NewPassword: React.FC<IProps> = ({ formik }: IProps) => {
   return (
     <form onSubmit={formik.handleSubmit}>
       <div>
-        <TextField
-          id="username"
-          name="username"
-          label="Username / Email"
-          color={'primary'}
-          value={formik.values.username}
-          onChange={formik.handleChange}
-          error={formik.touched.username && Boolean(formik.errors.username)}
-          helperText={formik.touched.username && formik.errors.username}
-          autoComplete="off"
-        />
         <TextField
           id="password"
           name="password"
@@ -50,7 +39,7 @@ const Login: React.FC<IProps> = ({ formik }: IProps) => {
             endIcon={<FontAwesomeIcon icon={faArrowRight} />}
             type="submit"
           >
-            SIGN IN
+            Confirm Your New Password
           </WWWButton>
         </div>
         <Typography variant={'subtitle2'} className="terms">
@@ -62,4 +51,4 @@ const Login: React.FC<IProps> = ({ formik }: IProps) => {
   );
 };
 
-export default memo(Login);
+export default memo(NewPassword);

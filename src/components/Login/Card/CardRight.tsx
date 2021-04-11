@@ -1,6 +1,6 @@
 import React from 'react';
 import WWWCard from 'worldwideandweb-storybook/dist/components/Card';
-import LoginContainer from '../Form/LoginContainer';
+import Authentication from '../Form';
 import useStyles from './Card.styles';
 
 const CardRight: React.FC = () => {
@@ -8,7 +8,7 @@ const CardRight: React.FC = () => {
   return (
     <WWWCard.Right>
       <div className={styles.right}>
-        <LoginContainer />
+        <Authentication />
       </div>
     </WWWCard.Right>
   );

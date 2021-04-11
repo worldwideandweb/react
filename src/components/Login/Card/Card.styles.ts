@@ -7,7 +7,7 @@ const useStyles = makeStyles({
     height: '100%',
   },
   right: {
-    ...flex('column', 'space-between', 'flex-start'),
+    ...flex('column', 'center', 'flex-start'),
     marginTop: '60px',
     width: '100%',
     position: 'relative',

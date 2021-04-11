@@ -5,7 +5,7 @@ import * as yup from 'yup';
 
 import useForm from '../../../hooks/useForm';
 import useSnackbar from '../../../hooks/useSnackbar';
-import Login from './Login';
+import Password from './Password';
 
 export type TLogin = {
   username: string;
@@ -18,28 +18,26 @@ const formInitialValues: TLogin = {
 };
 
 const formSchemaValidation = {
-  username: yup.string().required('Username is required'),
   password: yup
+    .string()
+    .min(8, 'Password should be of minimum 8 characters length')
+    .required('Password is required'),
+  confirmPassword: yup
     .string()
     .min(8, 'Password should be of minimum 8 characters length')
     .required('Password is required'),
 };
 
-interface IProps {
-  setUser: React.Dispatch<React.SetStateAction<CognitoUser | undefined>>;
-}
-
-const LoginContainer: React.FC<IProps> = ({ setUser }: IProps) => {
+const PasswordContainer: React.FC = () => {
   const sb = useSnackbar();
 
-  const submitLogin = async (values: TLogin) => {
+  const submit = async (values: TLogin) => {
     try {
       const user: CognitoUser = await Auth.signIn(
         values.username,
         values.password
       );
-
-      setUser(user);
+      console.log(user);
     } catch (e) {
       sb.trigger(`${e.message}`);
     }
@@ -48,10 +46,10 @@ const LoginContainer: React.FC<IProps> = ({ setUser }: IProps) => {
   const formik = useForm<TLogin>(
     formInitialValues,
     formSchemaValidation,
-    submitLogin
+    submit
   );
 
-  return <Login formik={formik} />;
+  return <Password formik={formik} />;
 };
 
-export default LoginContainer;
+export default PasswordContainer;

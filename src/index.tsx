@@ -10,15 +10,18 @@ import history from './routes/history';
 
 import awsExports from './utils/amplify-exports';
 import Amplify from 'aws-amplify';
+import { SnackbarProvider } from 'notistack';
 Amplify.configure(awsExports);
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router history={history}>
-      <MuiThemeProvider theme={theme}>
-        <App />
-      </MuiThemeProvider>
-    </Router>
+    <SnackbarProvider maxSnack={3}>
+      <Router history={history}>
+        <MuiThemeProvider theme={theme}>
+          <App />
+        </MuiThemeProvider>
+      </Router>
+    </SnackbarProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
