@@ -4,7 +4,29 @@ import theme, { flex } from 'worldwideandweb-storybook/dist/theme/theme';
 const useStyles = makeStyles({
   root: {
     ...flex('column', 'center', 'center'),
+    [theme.breakpoints.down('sm')]: {
+      ...flex('column', 'flex-start', 'center'),
+    },
     height: '100%',
+  },
+  card: {
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: 'none',
+      minWidth: 'revert',
+      width: 'auto',
+    },
+  },
+  cardLeft: {
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
+  },
+  cardRight: {
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      borderTopLeftRadius: '30px',
+      borderBottomLeftRadius: '30px',
+    },
   },
   right: {
     ...flex('column', 'center', 'flex-start'),
@@ -25,6 +47,11 @@ const useStyles = makeStyles({
       ...flex('row', 'flex-end'),
       marginTop: '16px',
       width: '100%',
+      '& button': {
+        [theme.breakpoints.down('sm')]: {
+          width: '100%',
+        },
+      },
     },
     '& h6': {
       width: '100%',
@@ -38,6 +65,7 @@ const useStyles = makeStyles({
   },
   rightImage: {
     width: '250px',
+    maxWidth: '100%',
   },
   left: {
     ...flex('column', 'space-between', 'flex-start'),

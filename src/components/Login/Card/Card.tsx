@@ -9,7 +9,7 @@ const Card: React.FC = () => {
     const styles = useStyles();
   return (
     <div className={styles.root}>
-      <WWWCard.Card>
+      <WWWCard.Card className={styles.card}>
         <CardLeft />
         <CardRight />
       </WWWCard.Card>

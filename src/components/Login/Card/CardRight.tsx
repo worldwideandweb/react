@@ -6,7 +6,7 @@ import useStyles from './Card.styles';
 const CardRight: React.FC = () => {
   const styles = useStyles();
   return (
-    <WWWCard.Right>
+    <WWWCard.Right className={styles.cardRight}>
       <img
         className={styles.rightImage}
         src={

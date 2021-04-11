@@ -9,7 +9,7 @@ import useStyles from './Card.styles';
 const CardLeft: React.FC = () => {
   const styles = useStyles();
   return (
-    <WWWCard.Left>
+    <WWWCard.Left className={styles.cardLeft}>
       <div className={styles.left}>
         <div>
           <Typography variant="h1">Get Started</Typography>
