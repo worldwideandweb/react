@@ -2,7 +2,7 @@ import React from 'react';
 import { Bar, Line, Radar } from 'react-chartjs-2';
 import {
   Grid,
-  Typography
+  Typography,
 } from 'worldwideandweb-storybook/dist/components/External';
 import theme from 'worldwideandweb-storybook/dist/theme/theme';
 import Chart from '../Charts';
