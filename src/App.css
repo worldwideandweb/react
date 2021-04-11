@@ -1,6 +1,5 @@
 .App {
   padding: 100px 24px 24px 24px;
-  height: 100%;
   box-sizing: border-box;
   background-image: url('./assets/background/abstract.png');
 }

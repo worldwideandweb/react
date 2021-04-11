@@ -18,7 +18,7 @@ const List: React.FC<IProps> = (props: IProps) => {
   return (
     <Link to={props.to} onClick={props.handleDrawerClose}>
       <ListItem button className={styles.root}>
-        <FontAwesomeIcon icon={faHome} />
+        <FontAwesomeIcon icon={props.icon} />
         <Typography variant={'body1'}>{props.text}</Typography>
       </ListItem>
     </Link>

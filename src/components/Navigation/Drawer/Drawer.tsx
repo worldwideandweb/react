@@ -1,4 +1,4 @@
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faArchive, faBriefcase, faChartLine, faCogs, faHome, faUserFriends } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { Drawer as MuiDrawer } from 'worldwideandweb-storybook/dist/components/External';
 import routes from '../../../routes/routes';
@@ -20,8 +20,32 @@ const Drawer: React.FC<IProps> = ({ drawerOpen, setDrawerOpen }: IProps) => {
       className={styles.root}
     >
       <List
-        icon={faHome}
-        text={'Home'}
+        icon={faChartLine}
+        text={'Dashboard'}
+        to={routes.home.base}
+        handleDrawerClose={() => setDrawerOpen(false)}
+      />
+      <List
+        icon={faUserFriends}
+        text={'Customers'}
+        to={routes.home.base}
+        handleDrawerClose={() => setDrawerOpen(false)}
+      />
+      <List
+        icon={faBriefcase}
+        text={'Employees'}
+        to={routes.home.base}
+        handleDrawerClose={() => setDrawerOpen(false)}
+      />
+      <List
+        icon={faArchive}
+        text={'Storage'}
+        to={routes.home.base}
+        handleDrawerClose={() => setDrawerOpen(false)}
+      />
+      <List
+        icon={faCogs}
+        text={'Settings'}
         to={routes.home.base}
         handleDrawerClose={() => setDrawerOpen(false)}
       />

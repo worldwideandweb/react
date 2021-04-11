@@ -1,6 +1,9 @@
 import React from 'react';
 import { Bar, Line, Radar } from 'react-chartjs-2';
-import { Grid } from 'worldwideandweb-storybook/dist/components/External';
+import {
+  Grid,
+  Typography
+} from 'worldwideandweb-storybook/dist/components/External';
 import theme from 'worldwideandweb-storybook/dist/theme/theme';
 import Chart from '../Charts';
 import NavigationContainer from '../Navigation/NavigationContainer/NavigationContainer';
@@ -36,6 +39,9 @@ const Dashboard = () => {
     <>
       <NavigationContainer />
       <Grid container className={styles.root} spacing={2}>
+        <Grid item xs={12}>
+          <Typography variant={'h2'}>Current Users</Typography>
+        </Grid>
         <Grid item md={4} sm={6} xs={12}>
           <Chart>
             <Bar data={data} />
@@ -53,6 +59,9 @@ const Dashboard = () => {
         </Grid>
       </Grid>
       <Grid container className={styles.root} spacing={2}>
+        <Grid item xs={12}>
+          <Typography variant={'h2'}>User Acquisition</Typography>
+        </Grid>
         <Grid item md={4} sm={6} xs={12}>
           <Chart>
             <Bar data={data} />
@@ -70,6 +79,9 @@ const Dashboard = () => {
         </Grid>
       </Grid>
       <Grid container className={styles.root} spacing={2}>
+        <Grid item xs={12}>
+          <Typography variant={'h2'}>Popular Pages</Typography>
+        </Grid>
         <Grid item md={4} sm={6} xs={12}>
           <Chart>
             <Bar data={data} />
