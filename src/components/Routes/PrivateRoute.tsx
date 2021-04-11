@@ -1,6 +1,7 @@
 import Auth from '@aws-amplify/auth';
 import React, { useEffect } from 'react';
 import { Route, RouteProps, useLocation } from 'react-router';
+import { Box } from 'worldwideandweb-storybook/dist/components/External';
 import useSnackbar from '../../hooks/useSnackbar';
 import history from '../../routes/history';
 import routes from '../../routes/routes';
@@ -29,7 +30,11 @@ const PrivateRoute: React.FC<IProps> = (props: IProps) => {
     }
   };
 
-  return <Route {...props} />;
+  return (
+    <Route {...props}>
+      <Box padding={'100px 0 24px 0'}>{props.children}</Box>
+    </Route>
+  );
 };
 
 export default PrivateRoute;

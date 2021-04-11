@@ -12,7 +12,9 @@ function App() {
     <div className="App">
       <Switch>
         <Route path={routes.login} component={Login} />
-        <PrivateRoute path={routes.home.base} component={Dashboard} />
+        <PrivateRoute path={routes.home.base}>
+          <Dashboard />
+        </PrivateRoute>
         <Redirect path={'/'} to={routes.home.base} />
       </Switch>
     </div>

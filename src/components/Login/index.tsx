@@ -3,9 +3,9 @@ import Card from './Card/Card';
 
 const Login = () => {
   return (
-    <div>
+    <>
       <Card />
-    </div>
+    </>
   );
 };
 

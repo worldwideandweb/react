@@ -4,9 +4,6 @@ import theme, { flex } from 'worldwideandweb-storybook/dist/theme/theme';
 const useStyles = makeStyles({
   root: {
     ...flex('column', 'center', 'center'),
-    [theme.breakpoints.down('sm')]: {
-      ...flex('column', 'flex-start', 'center'),
-    },
     height: '100%',
   },
   card: {
