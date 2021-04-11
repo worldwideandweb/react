@@ -14,16 +14,14 @@ const data = {
   datasets: [
     {
       label: 'My First dataset',
-      backgroundColor: theme.palette.primary.main,
       borderColor: theme.palette.primary.main,
-      borderWidth: 1,
+      borderWidth: 2,
       hoverBackgroundColor: theme.palette.primary.main,
       hoverBorderColor: theme.palette.secondary.main,
       data: [35, 49, 50, 61, 76, 85, 90],
     },
     {
       label: 'My Second dataset',
-      backgroundColor: theme.palette.secondary.main,
       borderColor: theme.palette.secondary.main,
       borderWidth: 1,
       hoverBackgroundColor: theme.palette.secondary.main,

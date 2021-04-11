@@ -7,19 +7,20 @@ const useStyles = makeStyles({
     height: '100%',
   },
   card: {
-    [theme.breakpoints.down('sm')]: {
+    height: 'fit-content',
+    [theme.breakpoints.down('md')]: {
       maxWidth: 'none',
       minWidth: 'revert',
       width: 'auto',
     },
   },
   cardLeft: {
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       display: 'none',
     },
   },
   cardRight: {
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       width: '100%',
       borderTopLeftRadius: '30px',
       borderBottomLeftRadius: '30px',
