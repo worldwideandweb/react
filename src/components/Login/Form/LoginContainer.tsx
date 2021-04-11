@@ -30,22 +30,22 @@ interface IProps {
 }
 
 const LoginContainer: React.FC<IProps> = ({ setUser }: IProps) => {
-    const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
   const sb = useSnackbar();
 
   const submitLogin = async (values: TLogin) => {
     try {
-        setLoading(true);
+      setLoading(true);
+      sb.trigger('Please wait, logging you in....', 'info');
       const user: CognitoUser = await Auth.signIn(
         values.username,
         values.password
       );
-
       setUser(user);
     } catch (e) {
       sb.trigger(`${e.message}`);
     } finally {
-        setLoading(false);
+      setLoading(false);
     }
   };
 

@@ -36,6 +36,9 @@ const useStyles = makeStyles({
       },
     },
   },
+  rightImage: {
+    width: '250px',
+  },
   left: {
     ...flex('column', 'space-between', 'flex-start'),
     width: '100%',

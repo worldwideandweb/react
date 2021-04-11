@@ -7,6 +7,13 @@ const CardRight: React.FC = () => {
   const styles = useStyles();
   return (
     <WWWCard.Right>
+      <img
+        className={styles.rightImage}
+        src={
+          'https://worldwideandweb.com/wp-content/uploads/2020/05/blueLogo-1.png'
+        }
+        alt="Logo"
+      />
       <div className={styles.right}>
         <Authentication />
       </div>
